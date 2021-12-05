@@ -1,0 +1,23 @@
+<%- include("partials/h_header") -%>
+
+<center>
+    <h1>TimeTable-Center</h1>
+    <div class="row row-cols-2 row-cols-md-4 g-4 p-md-5 p-1">
+
+        <% dept.forEach(d=>{ %> 
+        <div class="col">
+            <a href="/branch/<%= d %> " class=" btn">
+                <div
+                    class="card bg-light bg-gradient shadow border border-primary  bg-body rounded text-dark bg-light">
+                    <div class="card-body p-5">
+                        <h1><%= d %> </h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% }) %>
+        
+    </div>
+
+</center>
+<%- include("partials/h_footer") -%>

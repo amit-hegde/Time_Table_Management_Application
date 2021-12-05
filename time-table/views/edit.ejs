@@ -1,0 +1,136 @@
+<%- include("partials/a_header") -%>
+<center>
+
+    <h1>TIME TABLE</h1>
+    <h3>Edit Time-Table</h3>
+
+    <div class="container m-5 mt-1 p-5">
+        <form action="/edit" method="post">
+            <div class="row g-3">
+                <div class="col">
+                    <input type="text" class="form-control" name="branch" aria-label="First name"
+                        value=<%= user.branch %> readonly>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="sem" aria-label="First name" value=<%= user.sem %>
+                        readonly>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="div" aria-label="First name" value=<%= user.sec %>
+                        readonly>
+                </div>
+                <div class="col">
+                    <input type="hidden" name="day" value=<%= tt.dayno %>>
+                    <input type="hidden" name="id" value=<%= user._id %>>
+                    <input type="text" class="form-control" name="week" aria-label="First name" value=<%= tt.day %>
+                        readonly>
+                </div>
+            </div>
+            <h2>Classes</h2>
+            <% let c=tt.subs %>
+
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t1" value="8:30-9:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c1"
+                                value=<%= c[0].class %>>
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t2" value="9:30-10:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c2"
+                                value=<%= c[1].class %>>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t3"
+                                value="10:30-11:00" readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c3"
+                                value="BREAK" readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t4"
+                                value="11:00-12:00" readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c4"
+                                value=<%= c[3].class %>>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t5" value="12:00-1:00"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c5"
+                                value=<%= c[4].class %>>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t6" value="1:00-1:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c6"
+                                value="BREAK" readonly>
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t7" value="1:30-2:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c7"
+                                value=<%= c[6].class %>>
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t8" value="2:30-3:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c8"
+                                value=<%= c[7].class %>>
+                        </div>
+
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t9" value="3:30-4:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name" name="c9"
+                                value=<%= c[8].class %>>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" aria-label="First name" name="t10" value="4:30-5:30"
+                                readonly>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Class" aria-label="Last name"
+                                name="c10" value=<%= c[9].class %>>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-6 mx-auto g-3">
+
+                <button class="btn btn-primary" type="submit">ADD/EDIT</button>
+            </div>
+
+        </form>
+    </div>
+</center>
+<%- include("partials/a_footer") -%>

@@ -1,0 +1,37 @@
+<%- include("partials/h_header") -%>
+
+<center>
+    <h1>Semister's</h1>
+    <h3><a href="/">Home</a>/<a href=<%= Branch %>><%= Branch %> </a></h3>
+    <hr>
+    <div class="row row-cols-2 row-cols-md-4 mb-5 g-4 p-md-5 p-1">
+        <% let day=new Date().getDay()
+            if(day>0){
+                day=day-1
+            }
+         
+         %>
+        <% sems.forEach(d=>{ %>
+        <div class="col">
+
+            <a href="/branch/<%=Branch %>/<%= d %>/div/A/<%= day %> " class=" btn">
+                <div
+                    class="card bg-light bg-gradient shadow border border-primary p-1 bg-body rounded text-dark bg-light">
+                    <div class="card-body p-4">
+                        <h1>Sem-<%= d %> </h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% }) %>
+
+    </div>
+    <br><br>
+    <div class="row m-2 mb-0 p-2 border shadow rounded bg-light fixed-bottom">
+        <div class="d-grid gap-2 col-6 mx-auto ">
+            <a href="/" class="btn btn-secondary">Home</a>
+        </div>
+
+    </div>
+</center>
+<%- include("partials/h_footer") -%>
