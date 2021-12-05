@@ -13,7 +13,7 @@ app.use(express.static("public"))
 app.use(cookieParser());
 
 mongoose.connect("mongodb://localhost:27017/timetableDB", { useUnifiedTopology: true, useNewUrlParser: true });
-// mongoose.connect("mongodb+srv://kleit-timetable:timetable@cluster0.nolmu.mongodb.net/timetableDB", { useUnifiedTopology: true, useNewUrlParser: true });
+
 const AdminSchema = {
     branch: String,
     name: String,
