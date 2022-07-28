@@ -1,4 +1,4 @@
-# Time_Table_Application
+# Time_Table_Management_Application
 Time Table Management Web application for collages.
 Features:
     1)Students can view time-table of week also of the perticular day.
